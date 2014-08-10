@@ -1,4 +1,4 @@
-## Plot4.R
+## Plot4.R ready
 
 ## Choose your custom directory. If you don't, the program
 ## will run in your default location

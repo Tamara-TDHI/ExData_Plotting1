@@ -1,4 +1,4 @@
-## Plot3.R
+## Plot3.R ready
 
 ## Choose your custom directory. If you don't, the program
 ## will run in your default location
