@@ -3,7 +3,7 @@
 ## Choose your custom directory. If you don't, the program
 ## will run in your default location
 
-setwd("C:/Coursera/Exploratory Data Analysis/ExData_Plotting1")
+## setwd("C:/Coursera/Exploratory Data Analysis/ExData_Plotting1")
 
 if (!file.exists("data")) {
   dir.create("data") }

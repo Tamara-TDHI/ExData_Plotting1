@@ -1,4 +1,4 @@
-## Plot3.R
+## Plot4.R
 
 ## Choose your custom directory. If you don't, the program
 ## will run in your default location
@@ -28,16 +28,29 @@ EPC_subset$Date <- strptime(paste(EPC_subset$Date,EPC_subset$Time), "%d/%m/%Y %H
 
 Sys.setlocale("LC_TIME", "English")
 
-png(filename = "plot3.png", units="px", width = 480, height = 480,
+png(filename = "plot4.png", units="px", width = 504, height = 504,
     bg = "transparent")
+
+par (mfrow = c(2,2))
+
+plot(EPC_subset$Date, EPC_subset$Global_active_power, type="l",ylab="Global Active Power", xlab="")
+
+plot(EPC_subset$Date, EPC_subset$Voltage, type="l",ylab="Voltage", xlab="datetime")
 
 plot(EPC_subset$Date, EPC_subset$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
 lines(EPC_subset$Date, EPC_subset$Sub_metering_2, type="l", col="red")
 lines(EPC_subset$Date, EPC_subset$Sub_metering_3, type="l", col="blue")
 legend("topright", 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       lty='solid', 
+       
+       lty=c(1,1),
+       
+       bty='n',
        col=c("black","blue","red"))
 
+plot(EPC_subset$Date, EPC_subset$Global_reactive_power, type="l",ylab="Global_reactive_power", 
+     xlab="datetime")
 dev.off()
+
+
 
